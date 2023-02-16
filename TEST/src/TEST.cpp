@@ -1,7 +1,5 @@
 //============================================================================
 // Name        : TEST.cpp
-// Author      : Joshua Philip
-
 //============================================================================
 #include <iostream>
 using namespace std;
@@ -38,6 +36,7 @@ int* reverseArr(int arr []){
 }
 
 int main(){
+	// Initialize variables
 	int sum = 0;
 	int product = 0;
 	int input;
