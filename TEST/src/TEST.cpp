@@ -67,6 +67,10 @@ int main(){
 	// Print results
 	cout << endl << "Sum: " << sum << endl;
 	cout << "Product: " << product << endl;
+	cout << "Reversed Array: ";
+	for(int i = 0; i < size; i++){
+		cout << reverse[i] << " ";
+	}
 
 	return 0;
 }
