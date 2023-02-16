@@ -1,5 +1,6 @@
 //============================================================================
-// Name        : TEST.cpp
+// Name        : TEST
+// Author      : Joshua Philip
 //============================================================================
 #include <iostream>
 using namespace std;
@@ -14,11 +15,23 @@ int add(int arr []){
 	return sum;
 }
 
-// Multiplies passed in array values togethe
+// Multiplies passed in array values together
 int multiply(int arr []){
 		int result;
 		for(int i = 0; i < size; i++){
 			result = result * arr[i];
+		}
+		return result;
+}
+
+// Reverses passed in array
+int* reverseArr(int arr []){
+		int *result = NULL;
+		result = new int[size];
+		int count = 0;
+		for(int i = size - 1; i >= 0; i--){
+			 result[count] = arr[i];
+			 count++;
 		}
 		return result;
 }
@@ -32,6 +45,7 @@ int main(){
 	cout << "How many numbers to add and multiply?" << endl;
 	cin >> size;
 	int num[size];
+	int *reverse;
 	// Initialize array
 	for(int i = 0;i <= size; i++){
 		num[i] = 0;
@@ -47,10 +61,16 @@ int main(){
 	// Call add and multiply to do calculations
 	sum = add(num);
 	product = multiply(num);
+	reverse = reverseArr(num);
+
 
 	// Print results
 	cout << endl << "Sum: " << sum << endl;
 	cout << "Product: " << product << endl;
+	cout << "Reversed Array: ";
+	for(int i = 0; i < size; i++){
+		cout << reverse[i] << " ";
+	}
 
 	return 0;
 }
