@@ -10,3 +10,11 @@ int add(int arr []){
 	}
 	return sum;
 }
+
+int multiply(int arr []){
+		int result = 0;
+		for(int i = 0; i < sizeof(arr); i++){
+			result = result * arr[i];
+		}
+		return result;
+}
